@@ -11,77 +11,77 @@
           "title": "Features",
           "name": "feat",
           "emoji": "🎉",
-          "code": "feat(:tada:):"
+          "code": "feat:tada:"
         },
         {
           "description": "A bug fix",
           "title": "Bug Fixes",
           "name": "fix",
           "emoji": "🐞",
-          "code": "fix(:beetle:):"
+          "code": "fix:beetle:"
         },
         {
           "description": "Documentation only changes",
           "title": "Documentation",
           "name": "docs",
           "emoji": "📖",
-          "code": "docs(:book:):"
+          "code": "docs:book:"
         },
         {
           "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
           "title": "Styles",
           "name": "style",
           "emoji": "🌈",
-          "code": "style(:rainbow:):"
+          "code": "style:rainbow:"
         },
         {
           "description": "A code change that neither fixes a bug nor adds a feature",
           "title": "Code Refactoring",
           "name": "refactor",
           "emoji": "👍",
-          "code": "refactor(:+1:):"
+          "code": "refactor:+1:"
         },
         {
           "description": "A code change that improves performance",
           "title": "Performance Improvements",
           "name": "perf",
           "emoji": "🚀",
-          "code": "perf(:rocket:):"
+          "code": "perf:rocket:"
         },
         {
           "description": "Adding missing tests or correcting existing tests",
           "title": "Tests",
           "name": "test",
           "emoji": "🚥",
-          "code": "test(:traffic_light:):"
+          "code": "test:traffic_light:"
         },
         {
           "description": "Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)",
           "title": "Builds",
           "name": "build",
           "emoji": "🏗",
-          "code": "build(:building_construction:):"
+          "code": "build:building_construction:"
         },
         {
           "description": "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
           "title": "Continuous Integrations",
           "name": "ci",
           "emoji": "🤖",
-          "code": "ci(:robot:):"
+          "code": "ci:robot:"
         },
         {
           "description": "Other changes that don't modify src or test files",
           "title": "Chores",
           "name": "chore",
           "emoji": "🍺",
-          "code": "chore(:beer:):"
+          "code": "chore:beer:"
         },
         {
           "description": "Reverts a previous commit",
           "title": "Reverts",
           "name": "revert",
           "emoji": "🔙",
-          "code": "revert(:back:):"
+          "code": "revert:back:"
         }
       ]
     }
