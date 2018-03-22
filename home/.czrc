@@ -5,7 +5,7 @@
       "path": "cz-emoji"
     },
     "cz-emoji": {
-      "mode": "replace",
+      "mode": "merge",
       "types": [
         {
           "description": "A new feature",
