@@ -17,6 +17,9 @@ export LSCOLORS='exfxcxdxbxegedabagacad'
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+# brew
+export PATH="/usr/local/sbin:$PATH"
+
 alias l='ls -CF'
 alias la='ls -A'
 alias ls='ls -vG'
@@ -51,11 +54,11 @@ function git_since_last_commit {
     minutes_since_last_commit=$((seconds_since_last_commit/60));
     hours_since_last_commit=$((minutes_since_last_commit/60));
     minutes_since_last_commit=$((minutes_since_last_commit%60));
-    
+
     echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
 }
 
-PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ " 
+PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ "
 
 
 ### Docker 相關 ###
@@ -88,9 +91,13 @@ drm() { docker rm $(docker ps -a -q); }
 alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 # Remove all images
 dri() { docker rmi $(docker images -q); }
-# Dockerfile build, e.g., $dbu tcnksm/test 
+# Dockerfile build, e.g., $dbu tcnksm/test
 dbu() { docker build -t=$1 .; }
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
 # Bash into running container
 dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
+
+alias npmlsg="npm list -g --depth=0 2>/dev/null"
+alias npmls="npm list --depth=0 2>/dev/null"
+alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
