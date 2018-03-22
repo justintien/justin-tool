@@ -2,6 +2,7 @@
 - .bash_profile
 - .czrc
 ```sh
+npm install -g commitizen
 # see https://github.com/up9cloud/cz-emoji-types-angular
 npm i -g cz-conventional-changelog
 # npm i -g cz-emoji
