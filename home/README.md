@@ -1,6 +1,6 @@
 ### this is my home folder setting.
 - .bash_profile
-- .czrc
+- .czrc (commitizen)
 ```sh
 npm install -g commitizen
 # see https://github.com/up9cloud/cz-emoji-types-angular
