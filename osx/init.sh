@@ -43,6 +43,13 @@ brew install coreutils
 echo 'PATH="/usr/local/opt/coreutils/libexec/gunbin:$PATH"' >> ~/.bash_profile
 brew install htop
 brew install ctop
+brew install telnet
+brew install tree
+brew install truncate
+brew install watch
+
+# cloud storage rsync util
+# brew install rclone
 
 # latest curl
 brew install curl --with-nghttp2
