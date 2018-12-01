@@ -38,15 +38,44 @@ chsh -s $(brew --prefix)/bin/bash
 brew install bash-completion
 echo '[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion' >> ~/.bash_profile
 
-# unix command
+# optional: zsh (instead of bash) 
+brew install zsh zsh-completions
+# install oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# change default sh: zsh
+chsh -s $(which zsh)
+
+# unix command 
 brew install coreutils
 echo 'PATH="/usr/local/opt/coreutils/libexec/gunbin:$PATH"' >> ~/.bash_profile
+
+# monitor tools:
 brew install htop
 brew install ctop
+
+# network tools:
 brew install telnet
+# 網路診斷
+# brew install mtr
+# brew install tcping
+# 封包截取
+# brew cask install wireshark --with-qt
+# 封包截取 & 修改
+# brew cask install charles
+
+# file utils:
 brew install tree
 brew install truncate
 brew install watch
+
+# json parser
+brew install jq
+# yaml parser (support xml)
+brew install yq
+
+# International domain name library
+# brew install libidn && idn 賈胖
+# brew install libidn2 && idn2 賈胖
 
 # cloud storage rsync util
 # brew install rclone
@@ -55,7 +84,7 @@ brew install watch
 brew install curl --with-nghttp2
 brew link curl --force
 
-# version controll
+# version controll: git
 brew install git
 brew install git-lfs
 brew install git-extras
@@ -65,16 +94,16 @@ brew cask install sourcetree
 # brew cask install black-screen # this sucks
 
 # IDE && editor
-brew install nano
+# brew install nano
 brew cask install visual-studio-code
-brew cask install atom
+# brew cask install atom
 # brew cask install sublime-text
 # brew cask install typora # this sucks
 
 # node
 brew install node
-npm install -g grunt
-npm install -g webpack
+# npm install -g grunt # please use in project npm i -D grunt
+# npm install -g webpack # please use in project npm i -D webpack
 
 # other lang
 brew install python
@@ -142,6 +171,7 @@ brew cask install skype
 # brew cask install electronic-wechat # native wechat upgraded! so...
 brew cask install qq
 brew cask install slack
+brew cask install telegram
 
 # brew cask install libreoffice
 # brew cask install openvanilla
@@ -152,6 +182,8 @@ brew cask install slack
 brew cask install anki
 brew cask install elmedia-player
 
+# brew cask install coconutbattery 
+
 # backup config.
 brew install mackup
 
@@ -161,6 +193,9 @@ brew install mackup
 
 # giphy
 # https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984
+
+# 截图 gif 工具
+# brew cask install licecap
 
 ###########################
 # install game essentials #
