@@ -52,6 +52,8 @@ echo 'PATH="/usr/local/opt/coreutils/libexec/gunbin:$PATH"' >> ~/.bash_profile
 # monitor tools:
 brew install htop
 brew install ctop
+# disk i/o not found brew install iotop
+# 流量not found brew install iftop
 
 # network tools:
 brew install telnet
@@ -62,6 +64,7 @@ brew install telnet
 # brew cask install wireshark --with-qt
 # 封包截取 & 修改
 # brew cask install charles
+brew cask install ssh-tunnel-manager
 
 # file utils:
 brew install tree
