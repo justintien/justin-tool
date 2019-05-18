@@ -1,0 +1,23 @@
+[color]
+	ui = true
+        diff = auto
+        status = auto
+        branch = auto
+        log = auto
+[alias]
+	co = checkout
+	ci = commit -v
+	st = status
+	br = branch
+        lo = log --oneline --all --graph --decorate
+[user]
+	name = JustinTien
+	email = thitbbeb@gmail.com
+[core]
+	excludesfile = /Users/justintien/.gitignore_global
+	ignorecase = false
+	pager = less -F -X
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain

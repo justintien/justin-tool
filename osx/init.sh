@@ -129,6 +129,7 @@ brew install freetds
 brew cask install sqlitebrowser
 brew cask install robomongo
 brew cask install sequel-pro
+# brew install dbeaver
 # brew cask install mysqlworkbench
 
 # doc

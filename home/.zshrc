@@ -64,6 +64,7 @@ ZSH_THEME="dieter"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -118,16 +119,16 @@ alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 #--cache=$HOME/.npm/.cache/cnpm \
 #--disturl=https://npm.taobao.org/dist \
 #--userconfig=$HOME/.cnpmrc"
-alias ccurl="curl --socks5 127.0.0.1:1087"
-alias cbrew="ALL_PROXY=socks5://127.0.0.1:1087 brew"
+alias ccurl="curl --socks5 127.0.0.1:1086"
+alias cbrew="ALL_PROXY=socks5://127.0.0.1:1086 brew"
 
 # myip
 alias myip='nslookup myip.opendns.com resolver1.opendns.com'
 alias weather='curl wttr.in/xiamen'
 
-# drone (please spec by yourself)
-# export DRONE_SERVER=
-# export DRONE_TOKEN=
+# drone
+export DRONE_SERVER=https://drone.lolimeow1.com
+export DRONE_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXh0IjoianVzdGludGllbiIsInR5cGUiOiJ1c2VyIn0.IVuijPeFyXft5_plErul81HBc5ddkLglR9kz-C40bqA
 
 # urlencode
 function urlencode () {
@@ -156,3 +157,10 @@ docker volume prune
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# flush dns
+alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
+export NPM_TOKEN=`cat ~/.npmrc|grep "//npm.lolimeow1.com/:"|sed 's/\/\/npm.lolimeow1.com\/:_authToken="\(.*\)"/\1/'`
+export PATH="/usr/local/sbin:$PATH"
+
+alias gcloud='docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk gcloud --project polished-coil-233107'
