@@ -65,6 +65,9 @@ brew install telnet
 # 封包截取 & 修改
 # brew cask install charles
 brew cask install ssh-tunnel-manager
+# brew install autossh
+# vnc viewer
+# brew cask install vnc-viewer
 
 # file utils:
 brew install tree
