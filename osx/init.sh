@@ -26,6 +26,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # native mac HyperKit vm
 brew cask install docker
 
+# A simple terminal UI for both docker and docker-compose, written in Go with the gocui library.
+brew tap jesseduffield/lazydocker
+brew install lazydocker
+
 #####################
 # install dev tools #
 #####################
@@ -89,6 +93,7 @@ brew install yq
 # latest curl
 brew install curl --with-nghttp2
 brew link curl --force
+brew install wget
 
 # version controll: git
 brew install git
@@ -105,6 +110,9 @@ brew cask install visual-studio-code
 # brew cask install atom
 # brew cask install sublime-text
 # brew cask install typora # this sucks
+
+# markdown cli viewer
+# brew install mdp
 
 # node
 brew install node
@@ -153,7 +161,8 @@ brew cask install wechatwebdevtools
 ######################
 
 # vpn
-brew cask install shadowsocksx-ng
+# brew cask install shadowsocksx-ng
+brew cask install shadowsocksx-ng-r
 
 brew cask install the-unarchiver
 brew install p7zip
@@ -167,10 +176,14 @@ brew install tesseract --with-all-languages
 
 brew cask install google-chrome
 brew cask install firefox
+# brew install tor
+# brew cask install torbrowser
+
 
 # brew cask install dropbox
 # https://github.com/caskroom/homebrew-cask/issues/37271#issuecomment-319275948
 brew cask install google-backup-and-sync
+brew cask install google-photos-backup-and-sync
 
 # social
 brew cask install teamviewer
@@ -179,6 +192,7 @@ brew cask install skype
 brew cask install qq
 brew cask install slack
 brew cask install telegram
+brew cask install microsoft-teams
 
 # brew cask install libreoffice
 # brew cask install openvanilla
