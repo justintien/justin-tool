@@ -110,7 +110,8 @@ brew cask install visual-studio-code
 # brew cask install atom
 # brew cask install sublime-text
 # brew cask install typora # this sucks
-
+# brew cask install intellij-idea # 付費版
+# brew cask install intellij-idea-ce # 免費版
 # markdown cli viewer
 # brew install mdp
 
@@ -122,6 +123,7 @@ brew install node
 # other lang
 brew install python
 brew cask install java
+# brew install maven # for java
 brew install tidy-html5
 brew install ruby # override default old ruby
 brew install php71 --with-pear # to override default mac php5.5 (too old and apple recommand do not delete it)
@@ -245,6 +247,9 @@ brew cask install dosbox
 curl 'http://www.beecubu.com/downloads/iMouseTrick' > ~/Desktop/iMouseTrick.zip
 unzip ~/Desktop/iMouseTrick.zip
 mv ~/Desktop/iMouseTrick.app /Applications/
+
+# 樹莓派 刻錄 image to sd card 需要的 
+# brew cask install balenaetcher
 
 ##########
 # config #
