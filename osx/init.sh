@@ -128,6 +128,7 @@ brew install tidy-html5
 brew install ruby # override default old ruby
 brew install php71 --with-pear # to override default mac php5.5 (too old and apple recommand do not delete it)
 brew install composer
+brew install gcc # c/c++ compiler
 
 # android
 brew install android-sdk
@@ -191,10 +192,12 @@ brew cask install google-photos-backup-and-sync
 brew cask install teamviewer
 brew cask install skype
 # brew cask install electronic-wechat # native wechat upgraded! so...
+brew cask install wechat
 brew cask install qq
 brew cask install slack
 brew cask install telegram
 brew cask install microsoft-teams
+# brew cask install wxwork # 企业微信
 
 # brew cask install libreoffice
 # brew cask install openvanilla
