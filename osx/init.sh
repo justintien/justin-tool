@@ -122,40 +122,40 @@ brew install node
 
 # other lang
 brew install python
-brew cask install java
+# brew cask install java
 # brew install maven # for java
-brew install tidy-html5
-brew install ruby # override default old ruby
-brew install php71 --with-pear # to override default mac php5.5 (too old and apple recommand do not delete it)
-brew install composer
-brew install gcc # c/c++ compiler
+# brew install tidy-html5
+# brew install ruby # override default old ruby
+# brew install php71 --with-pear # to override default mac php5.5 (too old and apple recommand do not delete it)
+# brew install composer
+# brew install gcc # c/c++ compiler
 
 # android
-brew install android-sdk
-brew install android-ndk
-brew install apktool
-brew cask install android-studio
-brew cask install androidtool
-brew cask install android-file-transfer
+# brew install android-sdk
+# brew install android-ndk
+# brew install apktool
+# brew cask install android-studio
+# brew cask install androidtool
+# brew cask install android-file-transfer
 
 # db
-brew install freetds
-brew cask install sqlitebrowser
-brew cask install robomongo
-brew cask install sequel-pro
+# brew install freetds
+# brew cask install sqlitebrowser
+# brew cask install robomongo
+# brew cask install sequel-pro
 # brew install dbeaver
 # brew cask install mysqlworkbench
 
 # doc
-brew cask install dash
+# brew cask install dash
 
 # cli for cloud
 # brew install awscli # use docker instead
-gem install travis --no-rdoc --no-ri
-pip install docker-py
+# gem install travis --no-rdoc --no-ri
+# pip install docker-py
 
 # debug wechat inapp webview
-brew cask install wechatwebdevtools
+# brew cask install wechatwebdevtools
 
 # brew install wireshark
 
@@ -189,14 +189,14 @@ brew cask install google-backup-and-sync
 brew cask install google-photos-backup-and-sync
 
 # social
-brew cask install teamviewer
-brew cask install skype
+# brew cask install teamviewer
+# brew cask install skype
 # brew cask install electronic-wechat # native wechat upgraded! so...
-brew cask install wechat
-brew cask install qq
+# brew cask install wechat
+# brew cask install qq
 brew cask install slack
 brew cask install telegram
-brew cask install microsoft-teams
+# brew cask install microsoft-teams
 # brew cask install wxwork # 企业微信
 
 # brew cask install libreoffice
@@ -236,7 +236,7 @@ brew cask install steam
 # brew install cabextract
 
 # for dos games
-brew cask install dosbox
+# brew cask install dosbox
 
 # for unix* games
 # brew cask install xquartz
@@ -247,9 +247,9 @@ brew cask install dosbox
 # brew cask install wineskin-winery
 
 # auto clicker
-curl 'http://www.beecubu.com/downloads/iMouseTrick' > ~/Desktop/iMouseTrick.zip
-unzip ~/Desktop/iMouseTrick.zip
-mv ~/Desktop/iMouseTrick.app /Applications/
+# curl 'http://www.beecubu.com/downloads/iMouseTrick' > ~/Desktop/iMouseTrick.zip
+# unzip ~/Desktop/iMouseTrick.zip
+# mv ~/Desktop/iMouseTrick.app /Applications/
 
 # 樹莓派 刻錄 image to sd card 需要的 
 # brew cask install balenaetcher
