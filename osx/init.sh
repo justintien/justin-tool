@@ -115,13 +115,15 @@ brew cask install visual-studio-code
 # markdown cli viewer
 # brew install mdp
 
-# node
+# nodejs
 brew install node
 # npm install -g grunt # please use in project npm i -D grunt
 # npm install -g webpack # please use in project npm i -D webpack
 
 # other lang
 brew install python
+# brew install rust
+# brew install cargo-completion # The Rust package manager
 # brew cask install java
 # brew install maven # for java
 # brew install tidy-html5
@@ -165,12 +167,10 @@ brew install python
 
 # vpn
 # brew cask install shadowsocksx-ng
-brew cask install shadowsocksx-ng-r
+# brew cask install shadowsocksx-ng-r # not support AEAD chipers
 
 brew cask install the-unarchiver
 brew install p7zip
-
-brew cask install filezilla
 
 # ocr tool A_A
 brew install tesseract --with-all-languages
@@ -274,5 +274,10 @@ brew cleanup -n
 # manual memo #
 ###############
 
-echo 'execute /usr/local/opt/android-sdk/tools/android once to download essential packages.'
+# echo 'execute /usr/local/opt/android-sdk/tools/android once to download essential packages.'
+echo 'edit the ~/.bash_profile'
+echo 'edit the ~/.czrc'
+echo 'edit the ~/.gitconfig'
+echo 'edit the ~/.gitignore_global'
 echo 'edit the ~/.tmux.conf'
+echo 'edit the ~/.zshrc'

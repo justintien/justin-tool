@@ -11,8 +11,8 @@
 	br = branch
         lo = log --oneline --all --graph --decorate
 [user]
+	email = thitbbeb+git-commit@gmail.com
 	name = JustinTien
-	email = thitbbeb@gmail.com
 [core]
 	excludesfile = /Users/justintien/.gitignore_global
 	ignorecase = false
