@@ -15,19 +15,18 @@ sudo xcodebuild -license
 # install package manarger #
 ############################
 
-# homebrew
-# https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Installation.md
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# install homebrew
+# https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ##################
 # install docker #
 ##################
 
 # native mac HyperKit vm
-brew cask install docker
+brew install --cask docker
 
 # A simple terminal UI for both docker and docker-compose, written in Go with the gocui library.
-brew tap jesseduffield/lazydocker
 brew install lazydocker
 
 #####################
@@ -35,49 +34,54 @@ brew install lazydocker
 #####################
 
 # latest bash
-brew install bash
+brew install bash bash-completion
 echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells
-chsh -s $(brew --prefix)/bin/bash
-
-brew install bash-completion
 echo '[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion' >> ~/.bash_profile
+chsh -s $(which bash)
 
-# optional: zsh (instead of bash) 
-brew install zsh zsh-completions
-# install oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# change default sh: zsh
-chsh -s $(which zsh)
+###################################
+# optional: zsh (instead of bash) # use template oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
+###################################
+# brew install zsh zsh-completions
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# chsh -s $(which zsh)
 
 # unix command 
 brew install coreutils
 echo 'PATH="/usr/local/opt/coreutils/libexec/gunbin:$PATH"' >> ~/.bash_profile
 
-# monitor tools:
-brew install htop
-brew install ctop
+#################
+# monitor tools #
+#################
+brew install htop # Improved top (interactive process viewer)
+brew install ctop # Top-like interface for container metrics
 # disk i/o not found brew install iotop
-# 流量not found brew install iftop
+brew install iftop # Display an interface's bandwidth usage
+# brew install gotop # Terminal based graphical activity monitor inspired by gtop and vtop
 
-# network tools:
-brew install telnet
-# 網路診斷
-# brew install mtr
-# brew install tcping
-# 封包截取
-# brew cask install wireshark --with-qt
-# 封包截取 & 修改
-# brew cask install charles
-brew cask install ssh-tunnel-manager
+#################
+# network tools #
+#################
+# brew install telnet
+brew install mtr # 'traceroute' and 'ping' in a single tool
+brew install tcping # TCP connect to the given IP/port combo
+brew install --cask wireshark # Graphical network analyzer and capture tool
+brew install --cask charles # Web debugging Proxy application
+# brew install --cask ssh-tunnel-manager
 # brew install autossh
-# vnc viewer
-# brew cask install vnc-viewer
+# brew install --cask vnc-viewer # vnc viewer
 
-# file utils:
+##############
+# file tools #
+##############
 brew install tree
 brew install truncate
 brew install watch
+brew install rclone # Rsync for cloud storage
 
+###############
+# data parser #
+###############
 # json parser
 brew install jq
 # yaml parser (support xml)
@@ -87,164 +91,138 @@ brew install yq
 # brew install libidn && idn 賈胖
 # brew install libidn2 && idn2 賈胖
 
-# cloud storage rsync util
-# brew install rclone
-
 # latest curl
-brew install curl --with-nghttp2
-brew link curl --force
+brew install curl
 brew install wget
 
 # version controll: git
 brew install git
 brew install git-lfs
 brew install git-extras
-brew cask install sourcetree
+# brew install --cask sourcetree
 
-# terminal
-# brew cask install black-screen # this sucks
-
-# IDE && editor
+#######
+# IDE #
+#######
 # brew install nano
-brew cask install visual-studio-code
-# brew cask install atom
-# brew cask install sublime-text
-# brew cask install typora # this sucks
-# brew cask install intellij-idea # 付費版
-# brew cask install intellij-idea-ce # 免費版
+brew install --cask visual-studio-code
+# brew install --cask atom
+# brew install --cask sublime-text
+# brew install --cask typora # this sucks
+# brew install --cask typora # 付費版
+# brew install --cask intellij-idea-ce # 免費版
 # markdown cli viewer
-# brew install mdp
 
-# nodejs
-brew install node
-# npm install -g grunt # please use in project npm i -D grunt
-# npm install -g webpack # please use in project npm i -D webpack
-
-# other lang
+#########################
+# Programming language) #
+#########################
+brew install node # nodejs
 brew install python
 # brew install rust
-# brew install cargo-completion # The Rust package manager
-# brew cask install java
-# brew install maven # for java
+# brew install java
+# brew install maven # Java-based project management
+
 # brew install tidy-html5
 # brew install ruby # override default old ruby
-# brew install php71 --with-pear # to override default mac php5.5 (too old and apple recommand do not delete it)
-# brew install composer
+# brew install php
+# brew install composer # Dependency Manager for PHP
 # brew install gcc # c/c++ compiler
 
 # android
 # brew install android-sdk
 # brew install android-ndk
 # brew install apktool
-# brew cask install android-studio
-# brew cask install androidtool
-# brew cask install android-file-transfer
+# brew install --cask android-studio
+# brew install --cask androidtool
+# brew install --cask android-file-transfer
 
-# db
-# brew install freetds
-# brew cask install sqlitebrowser
-# brew cask install robomongo
-# brew cask install sequel-pro
-# brew install dbeaver
-# brew cask install mysqlworkbench
+############
+# Database #
+############
+# brew install freetds # Libraries to talk to Microsoft SQL Server and Sybase databases
+# brew install --cask db-browser-for-sqlite # Browser for SQLite databases
+# brew install --cask robo-3t # MongoDB management tool
+# brew install --cask sequel-pro # MySQL/MariaDB database management platform
+# brew install --cask dbeaver-community # Universal database tool and SQL client
+# brew install --cask mysqlworkbench # Visual tool to design, develop and administer MySQL servers
 
-# doc
-# brew cask install dash
+# brew install --cask dash # API documentation browser and code snippet manager
 
-# cli for cloud
-# brew install awscli # use docker instead
-# gem install travis --no-rdoc --no-ri
-# pip install docker-py
-
-# debug wechat inapp webview
-# brew cask install wechatwebdevtools
-
-# brew install wireshark
+# brew install --cask wechatwebdevtools # debug wechat inapp webview
 
 ######################
 # install other apps #
 ######################
 
 # vpn
-# brew cask install shadowsocksx-ng
-# brew cask install shadowsocksx-ng-r # not support AEAD chipers
+# brew install --cask shadowsocksx-ng
+# brew install --cask shadowsocksx-ng-r # not support AEAD chipers
 
-brew cask install the-unarchiver
-brew install p7zip
+brew install --cask the-unarchiver # Unpacks archive files
+brew install p7zip # 7-Zip (high compression file archiver) implementation
+brew install tesseract # OCR (Optical Character Recognition) engine
+brew install tesseract-lang # Enables extra languages support for Tesseract
 
-# ocr tool A_A
-brew install tesseract --with-all-languages
+# brew install --cask 1password # Password manager that keeps all passwords secure behind one password
 
-# brew cask install 1password
+# browser
+brew install --cask google-chrome
+brew install --cask firefox
+# brew install --cask tor-browser
 
-brew cask install google-chrome
-brew cask install firefox
-# brew install tor
-# brew cask install torbrowser
-
-
-# brew cask install dropbox
-# https://github.com/caskroom/homebrew-cask/issues/37271#issuecomment-319275948
-brew cask install google-backup-and-sync
-brew cask install google-photos-backup-and-sync
+# cloud drive
+# brew install --cask dropbox
+brew install --cask google-drive
 
 # social
-# brew cask install teamviewer
-# brew cask install skype
-# brew cask install electronic-wechat # native wechat upgraded! so...
-# brew cask install wechat
-# brew cask install qq
-brew cask install slack
-brew cask install telegram
-# brew cask install microsoft-teams
-# brew cask install wxwork # 企业微信
+# brew install --cask teamviewer
+# brew install --cask skype
+# brew install --cask wechat
+# brew install --cask qq
+brew install --cask slack
+brew install --cask telegram
+# brew install --cask microsoft-teams
 
-# brew cask install libreoffice
-# brew cask install openvanilla
-# wget https://github.com/lukhnos/openvanilla/raw/master/DataTables/bpmf.cin <= 給繁簡互轉用
+# brew install --cask libreoffice
 
-# brew cask install evernote
+brew install --cask anki
+brew install --cask elmedia-player
+# brew install --cask coconutbattery # Tool to show live information about the batteries in various devices
 
-brew cask install anki
-brew cask install elmedia-player
-
-# brew cask install coconutbattery 
-
-# backup config.
-brew install mackup
+brew install mackup # Keep your Mac's application settings in sync
 
 # cleanup
-# brew cask install cleanmymac
+# brew install --cask cleanmymac
 # https://itunes.apple.com/app/id921458519
 
 # giphy
 # https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984
 
 # 截图 gif 工具
-# brew cask install licecap
+# brew install --cask licecap
 
 ###########################
 # install game essentials #
 ###########################
 
-brew cask install steam
+brew install --cask steam
 
-# brew cask install minecraft
-# brew cask install feed-the-beast
+# brew install --cask minecraft
+# brew install --cask feed-the-beast
 
 # http://www.cabextract.org.uk/
 # brew install cabextract
 
 # for dos games
-# brew cask install dosbox
+# brew install --cask dosbox
 
 # for unix* games
-# brew cask install xquartz
+# brew install --cask xquartz
 
 # for windows games
 # https://wiki.winehq.org/MacOSX/Building
 # brew install wine
-# brew cask install wineskin-winery
+# brew install --cask wineskin-winery
 
 # auto clicker
 # curl 'http://www.beecubu.com/downloads/iMouseTrick' > ~/Desktop/iMouseTrick.zip
@@ -252,7 +230,7 @@ brew cask install steam
 # mv ~/Desktop/iMouseTrick.app /Applications/
 
 # 樹莓派 刻錄 image to sd card 需要的 
-# brew cask install balenaetcher
+# brew install --cask balenaetcher
 
 ##########
 # config #
