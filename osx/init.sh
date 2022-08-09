@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This is about apple silicon (M1)
+# This is about apple silicon (M1) MacBook pro 2021 14-inch
 # Justin 有使用到的 (會陸續更新)
 # Updated At: 2022/08/09
 
@@ -39,6 +39,10 @@ brew install --cask visual-studio-code
 # Programming language) #
 #########################
 brew install node # nodejs
+# install nvm: https://github.com/nvm-sh/nvm#installing-and-updating
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+# nvm install 16 # node16
+# nvm use 16
 
 ###############
 # GAME EDITOR #
