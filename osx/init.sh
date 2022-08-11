@@ -68,6 +68,11 @@ brew install --cask telegram
 brew install --cask discord
 # line 要從 app store 安裝
 
+#################
+# monitor tools #
+#################
+brew install htop # Improved top (interactive process viewer)
+
 ##########
 # BACKUP #
 ##########
