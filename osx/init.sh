@@ -69,15 +69,23 @@ brew install --cask discord
 # line 要從 app store 安裝
 
 #################
-# monitor tools #
+# MONITOR TOOLS #
 #################
 brew install htop # Improved top (interactive process viewer)
+
 
 ##########
 # BACKUP #
 ##########
 brew install mackup # Keep your Mac's application settings in sync
 # doc: https://github.com/lra/mackup/tree/master/doc
+
+
+#########
+# OTHER #
+#########
+brew install --cask figma
+
 
 vi .mackup.cfg
 [storage]
