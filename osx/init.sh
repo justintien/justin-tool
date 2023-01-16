@@ -85,7 +85,7 @@ brew install mackup # Keep your Mac's application settings in sync
 # OTHER #
 #########
 brew install --cask figma
-
+brew install --cask teamviewer
 
 vi .mackup.cfg
 [storage]
@@ -102,6 +102,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 # Press prefix + I (capital i, as in Install) to fetch the plugin.
 
+# default .czrc config
+curl https://raw.githubusercontent.com/justintien/justin-tool/master/home/.czrc > ~/.czrc
 
 # brew install curl (已內建)
 # brew install git (已內建)
